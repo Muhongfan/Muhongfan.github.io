@@ -107,6 +107,68 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -129,10 +191,9 @@
         </header>
 
         <div class="post-content">
-            <p>###Basic 1:</p>
-<ol>
-<li>Gender<br>| A boy/man | <em>Un</em> gar�0�4on/homme |<br>|A girl/woman | <em>Une</em> fille/femme |</li>
-<li><strong>I am</strong> but <strong>you are</strong><table>
+            <h3 id="Basic-1"><a href="#Basic-1" class="headerlink" title="Basic 1:"></a>Basic 1:</h3><ol>
+<li>Gender<br>| A boy / man | <em>Un</em> gar�0�4on / homme |<br>|A girl / woman | <em>Une</em> fille / femme |</li>
+<li>** I am ** but ** you are **<table>
 <thead>
 <tr>
 <th>subject</th>
@@ -158,43 +219,19 @@
 </tbody></table>
 </li>
 </ol>
-<p>###Greeting:</p>
-<ol>
+<h3 id="Greeting"><a href="#Greeting" class="headerlink" title="Greeting:"></a>Greeting:</h3><ol>
 <li>Greeting<br>| Good morning | bonjour |<br>| Good evening | bonsoir |<br>| Have a good evening | bonne soir��e |<br>| Good night| au revoir/ bonne nuit |<br>| Hi / Bye | salut |<br>| Nice to meet you | Enchant�� | </li>
 </ol>
-<ul>
-<li><p>How are you?</p>
-</li>
-<li><p>I’m fine / very well, and you?</p>
-</li>
-<li><p>Thank you very much.</p>
-</li>
-<li><p>Ca va? Comment allez-vous?</p>
-</li>
-<li><p>Ca va (tr��s bien), et toi?</p>
-</li>
-<li><p>Merci, beaucoup.</p>
-</li>
-</ul>
+<p>-How are you?<br>-I’m fine / very well, and you?<br>-Thank you very much.</p>
+<p>-Ca va? Comment allez-vous?<br>-Ca va (tr��s bien), et toi?<br>-Merci, beaucoup.</p>
 <ol start="2">
-<li>Introduction<br>| Je | m’appelle |<br>| Il / Elle | s’appelle |</li>
+<li>Introduction<br>|  —-  | —-  |<br>| Je | m’appelle |<br>| Il / Elle | s’appelle |</li>
 </ol>
-<ul>
-<li><p>My name is …</p>
-</li>
-<li><p>Je <em>m’appelle</em> …</p>
-</li>
-<li><p>His name is …</p>
-</li>
-<li><p>Il <em>s’appelle</em> …</p>
-</li>
-<li><p>Her name is …</p>
-</li>
-<li><p>Elle <em>s’appelle</em> …</p>
-</li>
-</ul>
+<p>-My name is …<br>-Je <em>m’appelle</em> …</p>
+<p>-His name is …<br>-Il <em>s’appelle</em> …</p>
+<p>-Her name is …<br>-Elle <em>s’appelle</em> …</p>
 <ol start="3">
-<li>Gender<br>|  | speak  | eat |  |<br>| je | parle | -<br>| tu | parles | manges |<br>| ps: vous | mangez |<br>| il / elle  | parle | mange | </li>
+<li>Gender<br>|  —-  | —-  |<br>|  | speak  | eat |  |<br>| je | parle | -<br>| tu | parles | manges |<br>| ps: vous | mangez |<br>| il / elle  | parle | mange | </li>
 </ol>
 
         </div>
