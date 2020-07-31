@@ -12,7 +12,7 @@
 
 
 
-<title>Record | Hexo</title>
+<title>20-7-29 CC French-Learning-Record | Hexo</title>
 
 
 
@@ -107,11 +107,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Record</h1>
+            <h1 class="post-title">20-7-29 CC French-Learning-Record</h1>
             
                 <div class="post-meta">
                     
@@ -129,7 +191,35 @@
         </header>
 
         <div class="post-content">
-            
+            <h3 id="People"><a href="#People" class="headerlink" title="People:"></a>People:</h3><p>1.|  subject   | verb  |<br>|  —-  | —-  |<br>| je / il / elle / on  | travaille |<br>| tu  | travailles |</p>
+<p> I work - Je travaille<br> Do you work here�0�7 - Tu <em>travailles</em> ici��<br> I work a lot. - Je travaille beaucoup.</p>
+<p>study / be studying - ��tudie </p>
+<ol start="2">
+<li><strong><em>�� and en</em></strong><br>City: J’habite �� Paris<br>Country: J’habite en France<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>England</td>
+<td>Angleterre</td>
+</tr>
+<tr>
+<td></td>
+<td>travailles</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>I live <em>in</em> Paris - J’habite <em>��</em> Paris<br>I live <em>in</em> France - J’habite <em>en</em> France<br>I live <em>with</em> Marie - J’habite <em>avec</em> Marie</p>
+<p>3.<br>|   |   |  |<br>|  —-  | —-  | —- |<br>| la | France | femme |<br>| le | Mexique | professeur |</p>
+<p>Journalist - journaliste</p>
+<ol start="4">
+<li><em>The</em> cat <em>of</em> Julia or <em>a</em> taxi <em>of</em> New York instead of <strong><em>Julia’s cat</em></strong> or <strong><em>a New York taxi</em></strong><br>La chat de Julia<br>Un taxi de New York</li>
+</ol>
+
         </div>
 
         
@@ -175,6 +265,8 @@
             </div>
         </section>
         <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/07/30/730/">730</a>
             
             
             <a class="next" rel="next" href="/2020/07/28/0728/">20-7-28 CC French-Learning-Record</a>
