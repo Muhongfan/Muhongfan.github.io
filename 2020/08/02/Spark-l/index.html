@@ -12,7 +12,7 @@
 
 
 
-<title>Diff_HashMape_and_HashTable | Hexo</title>
+<title>Spark_l | Hexo</title>
 
 
 
@@ -107,11 +107,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Diff_HashMape_and_HashTable</h1>
+            <h1 class="post-title">Spark_l</h1>
             
                 <div class="post-meta">
                     
@@ -120,7 +182,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">August 2, 2020&nbsp;&nbsp;20:59:53</a>
+                        Date: <a href="#">August 2, 2020&nbsp;&nbsp;21:40:25</a>
                         </span>
                     
                     
@@ -129,7 +191,9 @@
         </header>
 
         <div class="post-content">
-            <p><a href="https://www.cnblogs.com/williamjie/p/9099141.html" target="_blank" rel="noopener">https://www.cnblogs.com/williamjie/p/9099141.html</a></p>
+            <h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><ol>
+<li>Basic Spark: <a href="https://blog.csdn.net/Top_zhangxu/article/details/79864794?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-79864794.nonecase" target="_blank" rel="noopener">https://blog.csdn.net/Top_zhangxu/article/details/79864794?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-79864794.nonecase</a> </li>
+</ol>
 
         </div>
 
@@ -144,7 +208,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://yoursite.com/2020/08/02/Diff-HashMape-and-HashTable/">http://yoursite.com/2020/08/02/Diff-HashMape-and-HashTable/</a></span>
+                        <span><a href="http://yoursite.com/2020/08/02/Spark-l/">http://yoursite.com/2020/08/02/Spark-l/</a></span>
                     </p>
                 
                 
@@ -167,10 +231,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/Algorithm/"># Algorithm</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -181,10 +241,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/08/02/ref/">ref</a>
+                <a class="prev" rel="prev" href="/2020/08/02/802/">20-08-02 CC French-Learning-Record</a>
             
             
-            <a class="next" rel="next" href="/2020/08/01/801/">20-08-01 CC French-Learning-Record</a>
+            <a class="next" rel="next" href="/2020/08/02/ref/">ref</a>
             
         </section>
 
